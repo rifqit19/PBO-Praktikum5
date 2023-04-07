@@ -16,11 +16,13 @@ public class Hashmap {
 
         // Loop utama untuk meminta input dari pengguna
         while (!input.equals("exit")) {
+            System.out.println("------------------------------\n");
             System.out.print("Masukkan perintah (tambah/lihat/exit): ");
             input = scanner.nextLine();
 
             // Memproses input pengguna
             if (input.equals("tambah")) {
+                System.out.println("------------------------------\n");
                 System.out.print("Masukkan nama mahasiswa: ");
                 String nama = scanner.nextLine();
                 System.out.print("Masukkan nim mahasiswa: ");
@@ -35,8 +37,10 @@ public class Hashmap {
                     ArrayList<String> nims = mahasiswa.get(nama);
                     // Mengecek nim apabila sudah ada, tambahkan nilai ke nim yang sama
                     if (nims.contains(nim)) {
+                        // Jika nim sudah ada, tambahkan nilai ke ArrayList yang sudah ada
                         nims.add(nilai + "");
                     } else {
+                        // Jika nim belum ada, tambahkan nim dan nilai ke ArrayList yang sudah ada
                         nims.add(nim);
                         nims.add(nilai + "");
                     }
@@ -50,6 +54,9 @@ public class Hashmap {
                 }
             } else if (input.equals("lihat")) {
                 // Menampilkan data mahasiswa yang sudah disimpan
+                System.out.println("------------------------------\n");
+                System.out.println("Daftar nilai mahasiswa:");
+
                 for (String nama : mahasiswa.keySet()) {
                     ArrayList<String> nims = mahasiswa.get(nama);
                     System.out.print("Nama: " + nama + ", NIM: ");

@@ -18,13 +18,13 @@ public class MahasiswaAksi {
 
         // Loop utama untuk meminta input dari pengguna
         while (!input.equals("exit")) {
-            System.out.println("------------------------------");
+            System.out.println("------------------------------\n");
             System.out.print("Masukkan perintah (tambah/lihat/exit): ");
             input = scanner.nextLine();
 
             // Memproses input pengguna
             if (input.equals("tambah")) {
-                System.out.println("------------------------------");
+                System.out.println("------------------------------\n");
                 System.out.print("Masukkan nama mahasiswa: ");
                 String nama = scanner.nextLine();
                 System.out.print("Masukkan nim mahasiswa: ");
@@ -46,7 +46,7 @@ public class MahasiswaAksi {
 
             } else if (input.equals("lihat")) {
                 // menampilkan data mahasiswa dan IPK menggunakan Iterator
-                System.out.println("------------------------------");
+                System.out.println("------------------------------\n");
                 System.out.println("Daftar IPK mahasiswa:");
                 Iterator<Mahasiswa> iterator = mahasiswaList.iterator();
                 while (iterator.hasNext()) {
